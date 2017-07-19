@@ -11,8 +11,8 @@ public class Game {
     private final int NUMBER = new Random().nextInt(100)+1;
     private Player player;
 
-    public Game(Player player) {
-        this.player = player;
+    public Game() {
+        player = new Player();
     }
 
     private void evaluateGuess(int guess){

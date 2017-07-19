@@ -12,10 +12,14 @@ package com.thoughtworks.tw101.exercises.exercise8;
  * Dispenser 2:
  *
  * Bloater 1:
-  * Long method in Player class.
-  * Refactored by extracting a new method requestGuess().
+ *  Long method in Player class.
+ *  Refactored by extracting a new method requestGuess().
  *
  * Bloater 2:
+ *  Long parameter list in main method of this module.
+ *  Initially created an instance of Player and passed it to the Game constructor.
+ *  Refactored by replacing the Player instance and Game constructor call parameter
+ *  and instead creating a Player instance in the Game class constructor.
  *
  * OO Abuser 1:
  *
@@ -25,8 +29,7 @@ import java.util.InputMismatchException;
 
 public class Main {
     public static void main(String[] args) {
-        Player playerOne = new Player();
-        Game newGame = new Game(playerOne);
+        Game newGame = new Game();
         newGame.play();
     }
 }
