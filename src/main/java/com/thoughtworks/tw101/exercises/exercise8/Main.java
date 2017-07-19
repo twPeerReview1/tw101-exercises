@@ -22,7 +22,13 @@ package com.thoughtworks.tw101.exercises.exercise8;
  *  and instead creating a Player instance in the Game class constructor.
  *
  * OO Abuser 1:
- *
+ *  There is a Scanner object instance variable in the Player class that is
+ *  only used in one method. This is a temporary field that doesn't need to be
+ *  kept track of.
+ *  Refactored by creating a new PlayerInputReader class with the single method
+ *  requestGuess. Alternatively, I could have left the method requestGuess() in the
+ *  class, removed the Scanner instance variable, and instantiated it within the
+ *  method.
  */
 
 import java.util.InputMismatchException;
