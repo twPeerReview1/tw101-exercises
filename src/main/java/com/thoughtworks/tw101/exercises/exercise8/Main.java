@@ -6,6 +6,21 @@ package com.thoughtworks.tw101.exercises.exercise8;
 // Catch the NumberFormatException and handle the case -done
 // where the user entered a String that is not parseable.
 
+/*** --------------------- Identified Smells ------------------------- ***/
+/* Dispenser 1:
+ *
+ * Dispenser 2:
+ *
+ * Bloater 1:
+  * Long method in Player class.
+  * Refactored by extracting a new method requestGuess().
+ *
+ * Bloater 2:
+ *
+ * OO Abuser 1:
+ *
+ */
+
 import java.util.InputMismatchException;
 
 public class Main {

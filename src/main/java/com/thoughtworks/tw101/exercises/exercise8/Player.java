@@ -14,15 +14,19 @@ public class Player {
 
     public void guessNumber() throws InputMismatchException {
         do {
-            System.out.println("Guess a number:");
-            try {
-                number = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Not a valid guess");
-            }
-            scanner.nextLine();
+            requestGuess();
         } while (number == 0);
         guesses.add(number);
+    }
+
+    private void requestGuess() {
+        System.out.println("Guess a number:");
+        try {
+            number = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Not a valid guess");
+        }
+        scanner.nextLine();
     }
 
     public int getNumber() {
