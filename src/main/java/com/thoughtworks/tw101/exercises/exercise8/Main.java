@@ -8,8 +8,16 @@ package com.thoughtworks.tw101.exercises.exercise8;
 
 /*** --------------------- Identified Smells ------------------------- ***/
 /* Dispenser 1:
+ *  Both the Game and Player classes had an instance variable named 'number', which
+ *  could use comments to differentiate.
+ *  Instead, I refactored by renaming the variable in the Player class 'guessedNumber',
+ *  and renaming its corresponding getter method to 'getGuess()'.
  *
  * Dispenser 2:
+ *  The value stored in the instance variable guess from the Player class is already
+ *  stored in the ArrayList guesses.
+ *  I eliminated the dead instance variable and updated its getter method to extract
+ *  the value from 'guesses'.
  *
  * Bloater 1:
  *  Long method in Player class.

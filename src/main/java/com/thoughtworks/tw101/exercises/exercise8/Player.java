@@ -8,19 +8,19 @@ import java.util.Scanner;
  * Created by cgrad01 on 7/11/17.
  */
 public class Player {
-    private int number;
     private ArrayList<Integer> guesses = new ArrayList<>();
 
     public void guessNumber() throws InputMismatchException {
         PlayerInputReader inputReader = new PlayerInputReader();
+        int guess = 0;
         do {
-            number = inputReader.requestGuess();
-        } while (number == 0);
-        guesses.add(number);
+            guess = inputReader.requestGuess();
+        } while (guess == 0);
+        guesses.add(guess);
     }
 
-    public int getNumber() {
-        return number;
+    public int getGuess() {
+        return guesses.get(guesses.size()-1);
     }
     public ArrayList<Integer> getGuesses() {
         return guesses;
@@ -31,7 +31,7 @@ class PlayerInputReader {
 
     public int requestGuess() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Guess a number:");
+        System.out.println("Guess a guess:");
         try {
             return scanner.nextInt();
         } catch (InputMismatchException e) {

@@ -1,6 +1,5 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
-import java.util.InputMismatchException;
 import java.util.Random;
 
 /**
@@ -21,8 +20,8 @@ public class Game {
 
     public void play() {
         player.guessNumber();
-        while (NUMBER != player.getNumber()) {
-            evaluateGuess(player.getNumber());
+        while (NUMBER != player.getGuess()) {
+            evaluateGuess(player.getGuess());
             player.guessNumber();
         }
         System.out.println("You win!");
